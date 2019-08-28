@@ -266,19 +266,25 @@ REFERENCES "players" ("player_id");
 ALTER TABLE "player_stats_2014" ADD CONSTRAINT "fk_player_stats_2014_player_id" FOREIGN KEY("player_id")
 REFERENCES "players" ("player_id");
 
-CREATE TABLE "draymond_score_raw" (
-    "player_lastname" varchar   NOT NULL,
-    "player_firstname" varchar   NOT NULL,
-    "season" int   NOT NULL,
-    "draymond" dec   NOT NULL
+--drop table draymond_score;
+CREATE TABLE "draymond_score" (
+	"player_id" varchar,
+    "player_lastname" varchar,
+    "player_firstname" varchar,
+    "season" int,
+    "draymond" dec
 );
 
-SELECT * FROM draymond_score_raw;
-
-CREATE TABLE draymond_score AS
-	SELECT P.player_id, D.player_lastname, D.player_firstname, D.season, D.draymond
-	FROM draymond_score_raw D
-	JOIN players P
-	ON D.player_lastname=P.player_lastname AND D.player_firstname=P.player_firstname;
-
 SELECT * FROM draymond_score;
+
+---Query
+CREATE TABLE query_1 AS
+	SELECT D.player_lastname, D.player_firstname, P14.team_name, D.season, D.draymond, P14.mp, P14.pts
+	FROM draymond_score D
+	JOIN player_stats_2014 P14
+	ON D.player_id=P14.player_id AND D.season=P14.season;
+	
+SELECT * FROM query_1;
+
+
+
