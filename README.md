@@ -8,7 +8,9 @@ Our goal in this project was to combine our two sources in to a database so that
 ### Extraction, Cleanup, and Transformation
 As previously mentioned, our standard player statistics by season came from the website basketball-reference.com.  We gathered this information for a six-year period to align with the DRAYMOND analysis.  An example of one season’s data can be seen here:  https://www.basketball-reference.com/leagues/NBA_2019_per_game.html.  Lucky for us, Basketball Reference has an option called ‘Get table as CSV’, so we took full advantage of that!  Once we had the CSV files there was some cleanup to be done:
 
-• In the column for each player’s name, there was a “\” followed by a unique string for each player.  Example:  Damian          Lillard\lillada01.  We delimited this column to separate the unique string from the each player’s name.
+• In the column for each player’s name, there was a “\” followed by a unique string for each player (see example below). We delimited this column to separate the unique string from the each player’s name.
+
+![alt text](https://raw.githubusercontent.com/jarred104/ETL_NBA_Project/master/dame_example.PNG)
 
 •	Once we had the names in their own columns, we used delimited by space to separate player’s first name and last name in to their own individual columns.
 
