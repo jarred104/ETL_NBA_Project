@@ -1,4 +1,4 @@
-﻿-- Exported from QuickDBD: https://www.quickdatabasediagrams.com/
+-- Exported from QuickDBD: https://www.quickdatabasediagrams.com/
 -- Link to schema: https://app.quickdatabasediagrams.com/#/d/UXvOsB
 -- NOTE! If you have used non-SQL datatypes in your design, you will have to change these here.
 
@@ -6,230 +6,282 @@
 -- To reset the sample schema, replace everything with
 -- two dots ('..' - without quotes).
 
+--drop table player_stats_2014;
+--drop table player_stats_2015;
+--drop table player_stats_2016;
+--drop table player_stats_2017;
+--drop table player_stats_2018;
+--drop table player_stats_2019;
+--drop table players;
+
+
 CREATE TABLE "players" (
-    "player_id" varchar   NOT NULL,
-    "player_lastname" varchar   NOT NULL,
-    "player_firstname" varchar   NOT NULL,
+    "player_id" varchar,
+    "player_lastname" varchar,
+    "player_firstname" varchar,
     CONSTRAINT "pk_players" PRIMARY KEY (
         "player_id"
      )
 );
 
+SELECT * FROM players;
+
 CREATE TABLE "player_stats_2019" (
-    "player_id" varchar   NOT NULL,
-    "player_lastname" varchar   NOT NULL,
-    "player_firstname" varchar   NOT NULL,
-    "season" int   NOT NULL,
-    "position" varchar   NOT NULL,
-    "age" int   NOT NULL,
-    "team_name" varchar   NOT NULL,
-    "g" int   NOT NULL,
-    "gs" int   NOT NULL,
-    "mp" dec   NOT NULL,
-    "fg" dec   NOT NULL,
-    "fga" dec   NOT NULL,
-    "fg_perc" dec   NOT NULL,
-    "3p" dec   NOT NULL,
-    "3pa" dec   NOT NULL,
-    "3p_perc" dec   NOT NULL,
-    "2p" dec   NOT NULL,
-    "2pa" dec   NOT NULL,
-    "2p_perc" dec   NOT NULL,
-    "efg_perc" dec   NOT NULL,
-    "ft" dec   NOT NULL,
-    "fta" dec   NOT NULL,
-    "ft_perc" dec   NOT NULL,
-    "orb" dec   NOT NULL,
-    "drb" dec   NOT NULL,
-    "trb" dec   NOT NULL,
-    "ast" dec   NOT NULL,
-    "stl" dec   NOT NULL,
-    "blk" dec   NOT NULL,
-    "tov" dec   NOT NULL,
-    "pf" dec   NOT NULL,
-    "pts" dec   NOT NULL,
-    CONSTRAINT "pk_player_stats_2019" PRIMARY KEY (
-        "player_id"
-     )
+    "player_id" varchar,
+    "player_lastname" varchar,
+    "player_firstname" varchar,
+    "season" int,
+    "position" varchar,
+    "age" int,
+    "team_name" varchar,
+    "g" int,
+    "gs" int,
+    "mp" dec,
+    "fg" dec,
+    "fga" dec,
+    "fg_perc" dec,
+    "3p" dec,
+    "3pa" dec,
+    "3p_perc" dec,
+    "2p" dec,
+    "2pa" dec,
+    "2p_perc" dec,
+    "efg_perc" dec,
+    "ft" dec,
+    "fta" dec,
+    "ft_perc" dec,
+    "orb" dec,
+    "drb" dec,
+    "trb" dec,
+    "ast" dec,
+    "stl" dec,
+    "blk" dec,
+    "tov" dec,
+    "pf" dec,
+    "pts" dec
 );
+
+SELECT * FROM player_stats_2019;
 
 CREATE TABLE "player_stats_2018" (
-    "player_id" varchar   NOT NULL,
-    "player_lastname" varchar   NOT NULL,
-    "player_firstname" varchar   NOT NULL,
-    "season" int   NOT NULL,
-    "position" varchar   NOT NULL,
-    "age" int   NOT NULL,
-    "team_name" varchar   NOT NULL,
-    "g" int   NOT NULL,
-    "gs" int   NOT NULL,
-    "mp" dec   NOT NULL,
-    "fg" dec   NOT NULL,
-    "fga" dec   NOT NULL,
-    "fg_perc" dec   NOT NULL,
-    "3p" dec   NOT NULL,
-    "3pa" dec   NOT NULL,
-    "3p_perc" dec   NOT NULL,
-    "2p" dec   NOT NULL,
-    "2pa" dec   NOT NULL,
-    "2p_perc" dec   NOT NULL,
-    "efg_perc" dec   NOT NULL,
-    "ft" dec   NOT NULL,
-    "fta" dec   NOT NULL,
-    "ft_perc" dec   NOT NULL,
-    "orb" dec   NOT NULL,
-    "drb" dec   NOT NULL,
-    "trb" dec   NOT NULL,
-    "ast" dec   NOT NULL,
-    "stl" dec   NOT NULL,
-    "blk" dec   NOT NULL,
-    "tov" dec   NOT NULL,
-    "pf" dec   NOT NULL,
-    "pts" dec   NOT NULL,
-    CONSTRAINT "pk_player_stats_2018" PRIMARY KEY (
-        "player_id"
-     )
+    "player_id" varchar,
+    "player_lastname" varchar,
+    "player_firstname" varchar,
+    "season" int,
+    "position" varchar,
+    "age" int,
+    "team_name" varchar,
+    "g" int,
+    "gs" int,
+    "mp" dec,
+    "fg" dec,
+    "fga" dec,
+    "fg_perc" dec,
+    "3p" dec,
+    "3pa" dec,
+    "3p_perc" dec,
+    "2p" dec,
+    "2pa" dec,
+    "2p_perc" dec,
+    "efg_perc" dec,
+    "ft" dec,
+    "fta" dec,
+    "ft_perc" dec,
+    "orb" dec,
+    "drb" dec,
+    "trb" dec,
+    "ast" dec,
+    "stl" dec,
+    "blk" dec,
+    "tov" dec,
+    "pf" dec,
+    "pts" dec
 );
+
+SELECT * FROM player_stats_2018;
 
 CREATE TABLE "player_stats_2017" (
-    "player_id" varchar   NOT NULL,
-    "player_lastname" varchar   NOT NULL,
-    "player_firstname" varchar   NOT NULL,
-    "season" int   NOT NULL,
-    "position" varchar   NOT NULL,
-    "age" int   NOT NULL,
-    "team_name" varchar   NOT NULL,
-    "g" int   NOT NULL,
-    "gs" int   NOT NULL,
-    "mp" dec   NOT NULL,
-    "fg" dec   NOT NULL,
-    "fga" dec   NOT NULL,
-    "fg_perc" dec   NOT NULL,
-    "3p" dec   NOT NULL,
-    "3pa" dec   NOT NULL,
-    "3p_perc" dec   NOT NULL,
-    "2p" dec   NOT NULL,
-    "2pa" dec   NOT NULL,
-    "2p_perc" dec   NOT NULL,
-    "efg_perc" dec   NOT NULL,
-    "ft" dec   NOT NULL,
-    "fta" dec   NOT NULL,
-    "ft_perc" dec   NOT NULL,
-    "orb" dec   NOT NULL,
-    "drb" dec   NOT NULL,
-    "trb" dec   NOT NULL,
-    "ast" dec   NOT NULL,
-    "stl" dec   NOT NULL,
-    "blk" dec   NOT NULL,
-    "tov" dec   NOT NULL,
-    "pf" dec   NOT NULL,
-    "pts" dec   NOT NULL,
-    CONSTRAINT "pk_player_stats_2017" PRIMARY KEY (
-        "player_id"
-     )
+    "player_id" varchar,
+    "player_lastname" varchar,
+    "player_firstname" varchar,
+    "season" int,
+    "position" varchar,
+    "age" int,
+    "team_name" varchar,
+    "g" int,
+    "gs" int,
+    "mp" dec,
+    "fg" dec,
+    "fga" dec,
+    "fg_perc" dec,
+    "3p" dec,
+    "3pa" dec,
+    "3p_perc" dec,
+    "2p" dec,
+    "2pa" dec,
+    "2p_perc" dec,
+    "efg_perc" dec,
+    "ft" dec,
+    "fta" dec,
+    "ft_perc" dec,
+    "orb" dec,
+    "drb" dec,
+    "trb" dec,
+    "ast" dec,
+    "stl" dec,
+    "blk" dec,
+    "tov" dec,
+    "pf" dec,
+    "pts" dec
 );
+
+SELECT * FROM player_stats_2017;
 
 CREATE TABLE "player_stats_2016" (
-    "player_id" varchar   NOT NULL,
-    "player_lastname" varchar   NOT NULL,
-    "player_firstname" varchar   NOT NULL,
-    "season" int   NOT NULL,
-    "position" varchar   NOT NULL,
-    "age" int   NOT NULL,
-    "team_name" varchar   NOT NULL,
-    "g" int   NOT NULL,
-    "gs" int   NOT NULL,
-    "mp" dec   NOT NULL,
-    "fg" dec   NOT NULL,
-    "fga" dec   NOT NULL,
-    "fg_perc" dec   NOT NULL,
-    "3p" dec   NOT NULL,
-    "3pa" dec   NOT NULL,
-    "3p_perc" dec   NOT NULL,
-    "2p" dec   NOT NULL,
-    "2pa" dec   NOT NULL,
-    "2p_perc" dec   NOT NULL,
-    "efg_perc" dec   NOT NULL,
-    "ft" dec   NOT NULL,
-    "fta" dec   NOT NULL,
-    "ft_perc" dec   NOT NULL,
-    "orb" dec   NOT NULL,
-    "drb" dec   NOT NULL,
-    "trb" dec   NOT NULL,
-    "ast" dec   NOT NULL,
-    "stl" dec   NOT NULL,
-    "blk" dec   NOT NULL,
-    "tov" dec   NOT NULL,
-    "pf" dec   NOT NULL,
-    "pts" dec   NOT NULL,
-    CONSTRAINT "pk_player_stats_2016" PRIMARY KEY (
-        "player_id"
-     )
+    "player_id" varchar,
+    "player_lastname" varchar,
+    "player_firstname" varchar,
+    "season" int,
+    "position" varchar,
+    "age" int,
+    "team_name" varchar,
+    "g" int,
+    "gs" int,
+    "mp" dec,
+    "fg" dec,
+    "fga" dec,
+    "fg_perc" dec,
+    "3p" dec,
+    "3pa" dec,
+    "3p_perc" dec,
+    "2p" dec,
+    "2pa" dec,
+    "2p_perc" dec,
+    "efg_perc" dec,
+    "ft" dec,
+    "fta" dec,
+    "ft_perc" dec,
+    "orb" dec,
+    "drb" dec,
+    "trb" dec,
+    "ast" dec,
+    "stl" dec,
+    "blk" dec,
+    "tov" dec,
+    "pf" dec,
+    "pts" dec
 );
+
+SELECT * FROM player_stats_2016;
 
 CREATE TABLE "player_stats_2015" (
-    "player_id" varchar   NOT NULL,
+    "player_id" varchar,
+    "player_lastname" varchar,
+    "player_firstname" varchar,
+    "season" int,
+    "position" varchar,
+    "age" int,
+    "team_name" varchar,
+    "g" int,
+    "gs" int,
+    "mp" dec,
+    "fg" dec,
+    "fga" dec,
+    "fg_perc" dec,
+    "3p" dec,
+    "3pa" dec,
+    "3p_perc" dec,
+    "2p" dec,
+    "2pa" dec,
+    "2p_perc" dec,
+    "efg_perc" dec,
+    "ft" dec,
+    "fta" dec,
+    "ft_perc" dec,
+    "orb" dec,
+    "drb" dec,
+    "trb" dec,
+    "ast" dec,
+    "stl" dec,
+    "blk" dec,
+    "tov" dec,
+    "pf" dec,
+    "pts" dec
+);
+
+SELECT * FROM player_stats_2015;
+
+CREATE TABLE "player_stats_2014" (
+    "player_id" varchar,
+    "player_lastname" varchar,
+    "player_firstname" varchar,
+    "season" int,
+    "position" varchar,
+    "age" int,
+    "team_name" varchar,
+    "g" int,
+    "gs" int,
+    "mp" dec,
+    "fg" dec,
+    "fga" dec,
+    "fg_perc" dec,
+    "3p" dec,
+    "3pa" dec,
+    "3p_perc" dec,
+    "2p" dec,
+    "2pa" dec,
+    "2p_perc" dec,
+    "efg_perc" dec,
+    "ft" dec,
+    "fta" dec,
+    "ft_perc" dec,
+    "orb" dec,
+    "drb" dec,
+    "trb" dec,
+    "ast" dec,
+    "stl" dec,
+    "blk" dec,
+    "tov" dec,
+    "pf" dec,
+    "pts" dec
+);
+
+SELECT * FROM player_stats_2014;
+
+CREATE TABLE "draymond_score_raw" (
     "player_lastname" varchar   NOT NULL,
     "player_firstname" varchar   NOT NULL,
     "season" int   NOT NULL,
-    "position" varchar   NOT NULL,
-    "age" int   NOT NULL,
-    "team_name" varchar   NOT NULL,
-    "g" int   NOT NULL,
-    "gs" int   NOT NULL,
-    "mp" dec   NOT NULL,
-    "fg" dec   NOT NULL,
-    "fga" dec   NOT NULL,
-    "fg_perc" dec   NOT NULL,
-    "3p" dec   NOT NULL,
-    "3pa" dec   NOT NULL,
-    "3p_perc" dec   NOT NULL,
-    "2p" dec   NOT NULL,
-    "2pa" dec   NOT NULL,
-    "2p_perc" dec   NOT NULL,
-    "efg_perc" dec   NOT NULL,
-    "ft" dec   NOT NULL,
-    "fta" dec   NOT NULL,
-    "ft_perc" dec   NOT NULL,
-    "orb" dec   NOT NULL,
-    "drb" dec   NOT NULL,
-    "trb" dec   NOT NULL,
-    "ast" dec   NOT NULL,
-    "stl" dec   NOT NULL,
-    "blk" dec   NOT NULL,
-    "tov" dec   NOT NULL,
-    "pf" dec   NOT NULL,
-    "pts" dec   NOT NULL,
-    CONSTRAINT "pk_player_stats_2015" PRIMARY KEY (
-        "player_id"
-     )
+    "draymond" dec   NOT NULL
 );
 
-CREATE TABLE "draymond_score" (
-    "player_id" int   NOT NULL,
-    "player_lastname" varchar   NOT NULL,
-    "player_firstname" varchar   NOT NULL,
-    "season" int   NOT NULL,
-    "draymond" dec   NOT NULL,
-    CONSTRAINT "pk_draymond_score" PRIMARY KEY (
-        "player_id"
-     )
-);
+SELECT * FROM draymond_score_raw;
 
-ALTER TABLE "player_stats_2019" ADD CONSTRAINT "fk_player_stats_2019_player_id_player_lastname_player_firstname" FOREIGN KEY("player_id", "player_lastname", "player_firstname")
-REFERENCES "players" ("player_id", "player_lastname", "player_firstname");
+CREATE TABLE draymond_score AS
+	SELECT P.player_id, D.player_lastname, D.player_firstname, D.season, D.draymond
+	FROM draymond_score_raw D
+	JOIN players P
+	ON D.player_lastname=P.player_lastname AND D.player_firstname=P.player_firstname;
+	
+SELECT * FROM draymond_score;
 
-ALTER TABLE "player_stats_2018" ADD CONSTRAINT "fk_player_stats_2018_player_id_player_lastname_player_firstname" FOREIGN KEY("player_id", "player_lastname", "player_firstname")
-REFERENCES "players" ("player_id", "player_lastname", "player_firstname");
+ALTER TABLE "player_stats_2019" ADD CONSTRAINT "fk_player_stats_2019_player_id" FOREIGN KEY("player_id")
+REFERENCES "players" ("player_id");
 
-ALTER TABLE "player_stats_2017" ADD CONSTRAINT "fk_player_stats_2017_player_id_player_lastname_player_firstname" FOREIGN KEY("player_id", "player_lastname", "player_firstname")
-REFERENCES "players" ("player_id", "player_lastname", "player_firstname");
+ALTER TABLE "player_stats_2018" ADD CONSTRAINT "fk_player_stats_2018_player_id" FOREIGN KEY("player_id")
+REFERENCES "players" ("player_id");
 
-ALTER TABLE "player_stats_2016" ADD CONSTRAINT "fk_player_stats_2016_player_id_player_lastname_player_firstname" FOREIGN KEY("player_id", "player_lastname", "player_firstname")
-REFERENCES "players" ("player_id", "player_lastname", "player_firstname");
+ALTER TABLE "player_stats_2017" ADD CONSTRAINT "fk_player_stats_2017_player_id" FOREIGN KEY("player_id")
+REFERENCES "players" ("player_id");
 
-ALTER TABLE "player_stats_2015" ADD CONSTRAINT "fk_player_stats_2015_player_id_player_lastname_player_firstname" FOREIGN KEY("player_id", "player_lastname", "player_firstname")
-REFERENCES "players" ("player_id", "player_lastname", "player_firstname");
+ALTER TABLE "player_stats_2016" ADD CONSTRAINT "fk_player_stats_2016_player_id" FOREIGN KEY("player_id")
+REFERENCES "players" ("player_id");
+
+ALTER TABLE "player_stats_2015" ADD CONSTRAINT "fk_player_stats_2015_player_id" FOREIGN KEY("player_id")
+REFERENCES "players" ("player_id");
+
+ALTER TABLE "player_stats_2014" ADD CONSTRAINT "fk_player_stats_2014_player_id" FOREIGN KEY("player_id")
+REFERENCES "players" ("player_id");
 
 ALTER TABLE "draymond_score" ADD CONSTRAINT "fk_draymond_score_player_id" FOREIGN KEY("player_id")
 REFERENCES "players" ("player_id");
