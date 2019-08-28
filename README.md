@@ -20,9 +20,9 @@ As previously mentioned, our standard player statistics by season came from the 
 
 ![alt text](https://raw.githubusercontent.com/jarred104/ETL_NBA_Project/master/unidecode.png)
  
-Our DRAYMOND data came to us from FiveThirtyEight in a pretty much ready-to-use CSV.  The analysis article included a link to the Github repository where the CSV lives:  https://github.com/fivethirtyeight/data/tree/master/nba-draymond.  This CSV includes six years of data for each player.
+Our DRAYMOND data came to us from FiveThirtyEight in a pretty much ready-to-use CSV.  The analysis article included a link to the GitHub repository where the CSV lives:  https://github.com/fivethirtyeight/data/tree/master/nba-draymond.  This CSV includes six years of data for each player.
 
-We knew that in order to connect the DRAYMOND data with the six years of player data, we would have to build a intermediary table that held only unique player IDs and player names. We constructed this using the player IDs from the player statistics data, importing the player_id, player_lastname, and player_firstname columns for all six years into Jupyter Notebook and eliminating duplicates to have a single set of all unique Player IDs (see here:  https://github.com/jarred104/ETL_NBA_Project/blob/master/)
+We knew that in order to connect the DRAYMOND data with the six years of player data, we would have to build a intermediary table that held only unique player IDs and player names. We constructed this using the player IDs from the player statistics data, importing the player_id, player_lastname, and player_firstname columns for all six years into Jupyter Notebook and eliminating duplicates to have a single set of all unique Player IDs (see here:  https://github.com/jarred104/ETL_NBA_Project/blob/master/NBA_player_id.ipynb).
 
 ### Database Loading
 With a total of seven clean CSVs in-hand, we were then ready to load them into a database.  Before doing so, we first discussed the best course of action to join our data to make the tables as user-friendly as possible.  Our first step in doing this was to create a diagram using quickdatabasediagrams.com (see below or here:  https://github.com/jarred104/ETL_NBA_Project/blob/master/ETL_NBA_Project_Diagram.png).
