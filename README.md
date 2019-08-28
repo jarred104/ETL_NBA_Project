@@ -27,7 +27,7 @@ We knew that in order to connect the DRAYMOND data with the six years of player 
 ### Database Loading
 With a total of seven clean CSVs in-hand, we were then ready to load them into a database. Before doing so, we first discussed the best course of action to join our data to make the tables as user-friendly as possible. Our first step in doing this was to create a diagram using quickdatabasediagrams.com (see below or here: https://github.com/jarred104/ETL_NBA_Project/blob/master/ETL_NBA_Project_Diagram.png).
 
-![alt text](https://github.com/jarred104/ETL_NBA_Project/blob/master/ETL_NBA_Project_Diagram.png)
+![alt text](https://github.com/jarred104/ETL_NBA_Project/blob/master/ETL_NBA_db_diagram.png)
  
 Once we had this visualization, we exported the schema as a .sql file and loaded it into the relational database software system, pgAdmin. From there, we uploaded each CSV to each corresponding table, which we, in retrospect, realized could have included a single player stats table that combined all six years into one (as seen in our Jupyter Notebook file), as opposed to the individual years, although that may be more difficult to append with new data in the future.
 
