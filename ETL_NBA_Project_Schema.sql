@@ -248,23 +248,6 @@ CREATE TABLE "player_stats_2014" (
 
 SELECT * FROM player_stats_2014;
 
-CREATE TABLE "draymond_score_raw" (
-    "player_lastname" varchar   NOT NULL,
-    "player_firstname" varchar   NOT NULL,
-    "season" int   NOT NULL,
-    "draymond" dec   NOT NULL
-);
-
-SELECT * FROM draymond_score_raw;
-
-CREATE TABLE draymond_score AS
-	SELECT P.player_id, D.player_lastname, D.player_firstname, D.season, D.draymond
-	FROM draymond_score_raw D
-	JOIN players P
-	ON D.player_lastname=P.player_lastname AND D.player_firstname=P.player_firstname;
-	
-SELECT * FROM draymond_score;
-
 ALTER TABLE "player_stats_2019" ADD CONSTRAINT "fk_player_stats_2019_player_id" FOREIGN KEY("player_id")
 REFERENCES "players" ("player_id");
 
@@ -283,6 +266,19 @@ REFERENCES "players" ("player_id");
 ALTER TABLE "player_stats_2014" ADD CONSTRAINT "fk_player_stats_2014_player_id" FOREIGN KEY("player_id")
 REFERENCES "players" ("player_id");
 
-ALTER TABLE "draymond_score" ADD CONSTRAINT "fk_draymond_score_player_id" FOREIGN KEY("player_id")
-REFERENCES "players" ("player_id");
+CREATE TABLE "draymond_score_raw" (
+    "player_lastname" varchar   NOT NULL,
+    "player_firstname" varchar   NOT NULL,
+    "season" int   NOT NULL,
+    "draymond" dec   NOT NULL
+);
 
+SELECT * FROM draymond_score_raw;
+
+CREATE TABLE draymond_score AS
+	SELECT P.player_id, D.player_lastname, D.player_firstname, D.season, D.draymond
+	FROM draymond_score_raw D
+	JOIN players P
+	ON D.player_lastname=P.player_lastname AND D.player_firstname=P.player_firstname;
+
+SELECT * FROM draymond_score;
